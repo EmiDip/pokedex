@@ -11,3 +11,17 @@ window.onload = function () {
   console.log({ kgWeight });
   specificationsWeight.textContent = `${kgWeight}kg`;
 }
+
+let pokename = 'venusaur';
+const url = 'https://pokeapi.co/api/v2/pokemon/' + pokename;
+
+// const pokeimg = document.querySelector('w-100');
+
+
+fetch(url)
+.then( async (response) => {
+const data = await response.json();
+
+
+console.log(data);
+}) 
