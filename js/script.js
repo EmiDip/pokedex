@@ -1,3 +1,5 @@
+const pokemon = 'ditto';
+
 function poundsToKg(poundsWeight) {
   return poundsWeight / 2.2046;
 }
@@ -5,6 +7,9 @@ function poundsToKg(poundsWeight) {
 const specificationsWeight = document.querySelector('#specifications-weight');
 
 window.onload = function () {
+
+  fetchName();
+
   const poundsWeight = parseInt(specificationsWeight.textContent);
   console.log({ poundsWeight });
   const kgWeight = Math.round(poundsToKg(poundsWeight) * 100) / 100;
